@@ -1,0 +1,47 @@
+spring:
+  datasource:
+    # 参考https://github.com/alibaba/druid/tree/master/druid-spring-boot-starter
+    druid:
+      # JDBC配置
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql//127.0.0.1:3306?groupon
+      username: root
+      password:
+      # 连接池配置
+      filters: stat,wall,log4j,log4j2,slf4j,commonlogging
+      initialSize:
+      minIdle:
+      maxActive:
+      maxWait:
+      timeBetweenEvictionRunsMillis:
+      minEvictableIdleTimeMillis:
+      validationQuery:
+      testWhileIdle:
+      testOnBorrow:
+      testOnReturn:
+      poolPreparedStatements:
+      maxPoolPreparedStatementPerConnectionSize:
+
+      # WebStatFilter配置
+      web-stat-filter:
+        url-pattern:
+        exclusions:
+        session-stat-max-count:
+        session-stat-enable:
+        principal-cookie-name:
+        principal-session-name:
+      profile-enable:
+
+      # StatViewServlet配置
+      stat-view-servlet:
+        url-pattern:
+        allow:
+        reset-enable:
+        deny:
+        login-username:
+        login-password:
+
+      # Spring监控配置
+      # Spring监控AOP切入点，如x.y.z.service.*,配置多个英文逗号分隔
+      aop-patterns:
+      # 如果spring.datasource.druid.aop-patterns要代理的类没有定义interface请设置spring.aop.proxy-target-class=true

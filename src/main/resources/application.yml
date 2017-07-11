@@ -45,3 +45,8 @@ spring:
       # Spring监控AOP切入点，如x.y.z.service.*,配置多个英文逗号分隔
       aop-patterns:
       # 如果spring.datasource.druid.aop-patterns要代理的类没有定义interface请设置spring.aop.proxy-target-class=true
+# 日志配置
+logging:
+  level:
+    cn.com.banduo.wrobots: info
+    org.springframework.web: warn

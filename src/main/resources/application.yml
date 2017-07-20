@@ -30,7 +30,7 @@ spring:
         session-stat-enable:
         principal-cookie-name:
         principal-session-name:
-      profile-enable:
+        profile-enable:
 
       # StatViewServlet配置
       stat-view-servlet:
